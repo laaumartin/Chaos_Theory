@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Corresponds to Figure 2.6: orbit diagram for the logistic map
+# Corresponds to Figure 3.6: orbit diagram for the logistic map
 # x_{n+1} = r*x_n(1 - x_n) over the range r in [3.0, 4.0]
 
 # --- Simulation parameters ---
