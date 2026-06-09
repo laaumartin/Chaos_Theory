@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 
-# Corresponds to Figure 1.4: phase portrait for the linear system
+# Corresponds to Figure 2.4: phase portrait for the linear system
 # dx/dt = x + y, dy/dt = 4x - 2y, which has a saddle point at the origin
 matplotlib.use('Agg')
 
