@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 
-# Corresponds to Figure 1.3: bifurcation diagram for the supercritical
+# Corresponds to Figure 2.3: bifurcation diagram for the supercritical
 # pitchfork bifurcation dx/dt = rx - x^3
 matplotlib.use('Agg')
 
