@@ -58,7 +58,7 @@ Scripts corresponding to the figures in Chapter 3 of the thesis.
 - **renormalization3.py** — Renormalization at the exact superstable parameters R0 and R1 (Figure 3.12).
 - **dimension_logistic.py** — Correlation dimension analysis of the logistic map at the Feigenbaum accumulation point r_inf ≈ 3.5699456 (Figure 3.15).
 - **dimension_lorenz1.py** — Grassberger-Procaccia algorithm for the Lorenz system (Figure 3.16).
-- **lorenz_attractor.py** — Global view of the Lorenz strange attractor with sigma=10, rho=28, beta=8/3 (Figure 3.19).
+- **lorenz_attractor.py** — Global view of the Lorenz strange attractor with sigma=10, rho=28, beta=8/3 (Figure 3.17).
 
 ### Section 3 — Simulating Chaotic Behaviour: an application on rumour spreading on social media.
 Scripts corresponding to the figures in Chapter 4 of the thesis.
