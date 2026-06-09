@@ -48,8 +48,7 @@ def plot_cobweb_x2(ax, x_range, x0, n_iter, title):
     ax.legend(loc='upper left', fontsize=10)
     ax.grid(True, linestyle=':', alpha=0.6)
 
-# --- Figure 1.1 ---
-# Two-panel figure illustrating the two fixed points of f(x) = x^2
+# Figure illustrating the two fixed points of f(x) = x^2
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
