@@ -4,7 +4,7 @@ from scipy.integrate import solve_ivp
 import matplotlib
 matplotlib.use('Agg')
 
-# Corresponds to Figure 3.19: global view of the Lorenz strange attractor
+# Corresponds to Figure 3.17: global view of the Lorenz strange attractor
 # sigma=10, rho=28, beta=8/3 
 
 sigma = 10.0
@@ -35,7 +35,6 @@ x = x[2000:]
 y = y[2000:]
 z = z[2000:]
 
-# --- Figure 2.19: global view of the Lorenz butterfly ---
 fig = plt.figure(figsize=(10, 8))
 ax  = fig.add_subplot(111, projection='3d')
 
