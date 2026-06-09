@@ -4,7 +4,7 @@ import matplotlib.patches as patches
 import matplotlib
 matplotlib.use('Agg')
 
-# Corresponds to Figure 2.11: renormalization of the second iterate at r = 3.55
+# Corresponds to Figure 3.11: renormalization of the second iterate at r = 3.55
 # Left panel: f^(2)(x) and f^(4)(x) with a green box around the central peak
 # Right panel: the rescaled and inverted central peak overlaid on f^(2)(x)
 
