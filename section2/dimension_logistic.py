@@ -58,7 +58,6 @@ if np.sum(linear_region) > 2:
 else:
     slope = 0
 
-# --- Figure 2.15: two-panel figure ---
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
 # Left panel: fractal dust in the (x_n, x_{n+1}) embedding space
