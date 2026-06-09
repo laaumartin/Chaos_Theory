@@ -4,7 +4,7 @@ from scipy.spatial.distance import pdist
 import matplotlib
 matplotlib.use('Agg')
 
-# Corresponds to Figure 2.15: correlation dimension analysis of the logistic map
+# Corresponds to Figure 3.15: correlation dimension analysis of the logistic map
 # at the Feigenbaum accumulation point r_inf ≈ 3.56994567,
 # where the system sits exactly at the onset of chaos
 
