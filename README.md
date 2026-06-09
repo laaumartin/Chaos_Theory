@@ -86,8 +86,7 @@ pip install numpy scipy matplotlib pandas
 
 ## Output
 
-Each script saves its output as a PDF file in the `results/` subfolder of the corresponding section. No graphical display is required; all figures are saved directly to disk.
-
+Each script saves as a PDF or png file. No graphical display is required; all figures are saved directly to disk. You can find the results in a ```results/``` subfolder for each of the sections.
 ## Licence
 
 This work is licensed under Creative Commons Attribution – Non Commercial – Non Derivatives.
