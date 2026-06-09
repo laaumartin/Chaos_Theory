@@ -4,7 +4,7 @@ from scipy.spatial.distance import pdist
 import matplotlib
 matplotlib.use('Agg')
 
-# Corresponds to Figure 2.16: Grassberger-Procaccia algorithm for the Lorenz system
+# Corresponds to Figure 3.16: Grassberger-Procaccia algorithm for the Lorenz system
 # Left panel: sampled points on the Lorenz attractor
 # Right panel: log-log plot of C(r) vs r with linear fit for Dc
 
