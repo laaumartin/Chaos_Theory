@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Corresponds to Figure 1.5: phase portrait for the Lotka-Volterra
+# Corresponds to Figure 2.5: phase portrait for the Lotka-Volterra
 # competition model (Rabbits vs. Sheep)
 # dx/dt = x(3 - x - 2y), dy/dt = y(2 - x - y)
 
