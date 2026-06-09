@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Corresponds to Figure 1.1: Cobweb diagram for the map f (x) = x^2.
+# Corresponds to Figure 2.1: Cobweb diagram for the map f (x) = x^2.
 def plot_cobweb_x2(ax, x_range, x0, n_iter, title):
     """
     Draws a cobweb diagram for the map f(x) = x^2.
