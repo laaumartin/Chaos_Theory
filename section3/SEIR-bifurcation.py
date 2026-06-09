@@ -4,7 +4,7 @@ from scipy.integrate import odeint
 from scipy.signal import find_peaks
 
 # ============================================================
-# Corresponds to Figures 3.1 - 3.4: bifurcation diagrams for
+# Corresponds to Figures 4.1 - 4.4: bifurcation diagrams for
 # the seasonally forced SEIR model for rumour spread on social
 # media.
 #
@@ -24,7 +24,7 @@ from scipy.signal import find_peaks
 # epsilon, plotted on a log10 scale.
 # ============================================================
 
-# ── User parameters (change these for each case) ──────────────────────────────
+# User parameters (change these for each case) 
 
 mu        = 0.02          # demographic turnover rate (yr^-1)
 sigma     = 365.0 / 8.0   # E->I transition rate (yr^-1), latency ~8 days
@@ -37,11 +37,11 @@ output_filename = '02_bifurcation.png'
 # Case 3: mu=0.01,  sigma=365/15, gamma=36,  case_label='Case 3', output='03_bifurcation.png'
 # Case 4: mu=0.005, sigma=365/25, gamma=18,  case_label='Case 4', output='04_bifurcation.png'
 
-# ── Fixed parameters (common to all cases) ────────────────────────────────────
+# Fixed parameters (common to all cases)
 beta0 = 1241.0        # baseline transmission rate (yr^-1)
 omega = 2.0 * np.pi   # annual forcing frequency (rad/yr)
 
-# ── Time windows ──────────────────────────────────────────────────────────────
+# Time windows
 t_transient = 950     # years discarded as transient
 t_sample    =  50     # years used for analysis
 total_years = t_transient + t_sample
@@ -50,7 +50,7 @@ pts_per_yr  = 500     # time points per year (resolution)
 t_full = np.linspace(0, total_years, total_years * pts_per_yr)
 y0     = [0.06, 0.001, 0.001]   # fixed initial condition for all runs
 
-# ── SEIR model ────────────────────────────────────────────────────────────────
+# SEIR model 
 def forced_seir(y, t, eps, mu, sigma, gamma):
     """
     Right-hand side of the forced SEIR system.
@@ -73,7 +73,7 @@ def forced_seir(y, t, eps, mu, sigma, gamma):
     dI = sigma * E - (mu + gamma) * I
     return [dS, dE, dI]
 
-# ── Bifurcation computation ───────────────────────────────────────────────────
+# Bifurcation computation
 n_eps   = 250          # number of epsilon values (horizontal resolution)
 eps_max = 0.30         # maximum forcing amplitude
 
@@ -104,7 +104,7 @@ for i, eps in enumerate(eps_vals):
 
 print(f"  {len(eps_plot)} peaks recorded.")
 
-# ── Figure ────────────────────────────────────────────────────────────────────
+# Figure
 fig, ax = plt.subplots(figsize=(11, 6))
 ax.set_facecolor('#f8f9fa')
 
