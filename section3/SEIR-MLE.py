@@ -4,13 +4,12 @@ import pandas as pd
 from scipy.integrate import odeint
 
 # ============================================================
-# Corresponds to Figures 3.6 - 3.9: maximal Lyapunov exponent
+# Corresponds to Figures 4.6 - 4.9: maximal Lyapunov exponent
 # for the seasonally forced SEIR model for rumour spread on
 # social media, for four different parameter configurations
 # (Cases 1-4).
 #
-# Method: Benettin et al. (1980) — single perturbation with
-# periodic renormalisation.
+# Method: Benettin et al. (1980) — single perturbation with periodic renormalisation.
 #
 # A positive lambda confirms deterministic chaos.
 # Lambda = 0 indicates a periodic orbit (or quasi-periodic).
@@ -20,7 +19,7 @@ from scipy.integrate import odeint
 # the parameters in the "User parameters" section below.
 # ============================================================
 
-# ── User parameters (change these for each case) ──────────────────────────────
+# User parameters (change these for each case)
 
 mu         = 0.02           # demographic turnover rate (yr^-1)
 sigma      = 365.0 / 8.0    # E->I transition rate (yr^-1), latency ~8 days
@@ -33,11 +32,11 @@ output_filename = 'lyapunov_case2'   # extension added automatically below
 # Case 3: mu=0.01,  sigma=365/15, gamma=36,  case_label='Case 3', output='lyapunov_case3'
 # Case 4: mu=0.005, sigma=365/25, gamma=18,  case_label='Case 4', output='lyapunov_case4'
 
-# ── Fixed parameters (common to all cases) ────────────────────────────────────
+# Fixed parameters (common to all cases)
 beta0 = 1241.0        # baseline transmission rate (yr^-1)
 omega = 2.0 * np.pi   # annual forcing frequency (rad/yr)
 
-# ── Time structure ────────────────────────────────────────────────────────────
+# Time structure
 t_transient  = 950      # years discarded as transient
 t_lyapunov   =  50      # years used for lambda computation
 tau          =  0.01    # renormalisation interval (years, ~3.6 days)
@@ -49,7 +48,7 @@ delta0 = 1e-8           # initial perturbation magnitude (applied to S)
 
 y0 = [0.06, 0.001, 0.001]   # fixed initial condition for all runs
 
-# ── SEIR model ────────────────────────────────────────────────────────────────
+# SEIR model 
 def forced_seir(y, t, eps):
     """
     Right-hand side of the forced SEIR system.
@@ -69,7 +68,7 @@ def forced_seir(y, t, eps):
     dI = sigma * E - (mu + gamma) * I
     return [dS, dE, dI]
 
-# ── Benettin method for one value of eps ──────────────────────────────────────
+# Benettin method for one value of eps 
 def compute_lyapunov(eps):
     """
     Returns the maximal Lyapunov exponent (yr^-1) for a given eps,
@@ -137,7 +136,7 @@ def compute_lyapunov(eps):
         return 0.0
     return log_sum / t_lyapunov   # yr^-1
 
-# ── Sweep over epsilon ────────────────────────────────────────────────────────
+# Sweep over epsilon
 eps_vals  = np.linspace(0.0, 0.30, 120)
 lyap_vals = []
 
@@ -152,12 +151,12 @@ for i, eps in enumerate(eps_vals):
 
 lyap_vals = np.array(lyap_vals)
 
-# ── Save raw values ───────────────────────────────────────────────────────────
+# Save raw values
 df = pd.DataFrame({"epsilon": eps_vals, "lambda_yr": lyap_vals})
 df.to_csv(f"{output_filename}.csv", index=False)
 print(f"\nSaved: {output_filename}.csv")
 
-# ── Figure ────────────────────────────────────────────────────────────────────
+# Figure
 fig, ax = plt.subplots(figsize=(10, 5))
 ax.set_facecolor('#f8f9fa')
 
@@ -190,7 +189,7 @@ plt.savefig(f"{output_filename}.png", dpi=180, bbox_inches='tight')
 print(f"Saved: {output_filename}.png")
 plt.close()
 
-# ── Summary ───────────────────────────────────────────────────────────────────
+# Summary
 n_chaos = (lyap_vals > 0).sum()
 print(f"\nSummary for {case_label}:")
 print(f"  Values with lambda > 0 (chaos): {n_chaos} / {len(eps_vals)}")
