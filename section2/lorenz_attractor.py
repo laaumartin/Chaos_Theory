@@ -4,8 +4,8 @@ from scipy.integrate import solve_ivp
 import matplotlib
 matplotlib.use('Agg')
 
-# Corresponds to Figure 2.19: global view of the Lorenz strange attractor
-# sigma=10, rho=28, beta=8/3 (classical parameter values)
+# Corresponds to Figure 3.19: global view of the Lorenz strange attractor
+# sigma=10, rho=28, beta=8/3 
 
 sigma = 10.0
 rho   = 28.0
