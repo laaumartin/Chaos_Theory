@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 
-# Corresponds to Figure 1.2: vector field and phase portrait for dx/dt = sin(x)
+# Corresponds to Figure 2.2: vector field and phase portrait for dx/dt = sin(x)
 matplotlib.use('Agg')
 
 # Define the vector field f(x) = sin(x)
