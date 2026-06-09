@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('Agg')
 
-# Corresponds to Figure 2.12: renormalization of the logistic map
+# Corresponds to Figure 3.12: renormalization of the logistic map
 # at the exact superstable parameters R0 and R1
 
 # Superstable parameters:
