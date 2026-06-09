@@ -63,7 +63,6 @@ linear_region = (log_r > 0.0) & (log_r < 1.5)
 slope, intercept = np.polyfit(log_r[linear_region],
                                log_Cr[linear_region], 1)
 
-# --- Figure 2.16: two-panel figure ---
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
 # Left panel: sampled points on the attractor projected onto the (x,z) plane
