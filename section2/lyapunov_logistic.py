@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Corresponds to Figure 2.7: Lyapunov exponent for the logistic map
+# Corresponds to Figure 3.7: Lyapunov exponent for the logistic map
 # x_{n+1} = r*x_n(1 - x_n) as a function of the growth rate r
 
 # --- Simulation parameters ---
