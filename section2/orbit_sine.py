@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('Agg')
 
-# Corresponds to Figure 2.8: orbit diagram for the sine map
+# Corresponds to Figure 3.8: orbit diagram for the sine map
 # x_{n+1} = r*sin(pi*x_n) over the range r in [0.70, 1.00]
 
 # --- Simulation parameters ---
