@@ -4,7 +4,7 @@ import matplotlib.patches as patches
 import matplotlib
 matplotlib.use('Agg')
 
-# Corresponds to Figure 2.10: renormalization of the logistic map at r = 3.4
+# Corresponds to Figure 3.10: renormalization of the logistic map at r = 3.4
 # Left panel: f(x) and f^(2)(x) with a green box around the central peak of f^(2)
 # Right panel: the rescaled and inverted central peak overlaid on f(x)
 
