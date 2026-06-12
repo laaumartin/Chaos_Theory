@@ -24,6 +24,7 @@ beta0 = 1241.0
 sigma = 365.0 / 8.0
 gamma = 73.0
 omega = 2.0 * np.pi
+# N     = 5000000     # total population size
 
 
 # ── Time structure ────────────────────────────────────────────────────────────
@@ -56,11 +57,10 @@ def forced_seir(y, t):
 
 # ── Integration ───────────────────────────────────────────────────────────────
 print(f"Integrating trajectory 1 (E0 = {E0_1})...")
-sol1 = odeint(forced_seir, y0_1, t_full, atol=1e-10, rtol=1e-8, hmax=0.02)
+sol1 = odeint(forced_seir, y0_1, t_full, atol=1e-17, rtol=1e-8, hmax=0.02)
 
 print(f"Integrating trajectory 2 (E0 = {E0_2})...")
-sol2 = odeint(forced_seir, y0_2, t_full, atol=1e-10, rtol=1e-8, hmax=0.02)
-
+sol2 = odeint(forced_seir, y0_2, t_full, atol=1e-17, rtol=1e-8, hmax=0.02)
 # Extract the stationary regime (last t_sample years)
 idx_start = t_transient * pts_per_yr
 t_plot = t_full[idx_start:]   # runs from 950 to 1000
@@ -69,13 +69,13 @@ S1, E1, I1 = sol1[idx_start:].T
 S2, E2, I2 = sol2[idx_start:].T
 
 # Log10 transformation for phase portrait
-log_S1 = np.log10(np.maximum(S1, 1e-10))
-log_E1 = np.log10(np.maximum(E1, 1e-10))
-log_I1 = np.log10(np.maximum(I1, 1e-10))
+log_S1 = np.log10(np.maximum(S1, 1e-18))
+log_E1 = np.log10(np.maximum(E1, 1e-18))
+log_I1 = np.log10(np.maximum(I1, 1e-18))
 
-log_S2 = np.log10(np.maximum(S2, 1e-10))
-log_E2 = np.log10(np.maximum(E2, 1e-10))
-log_I2 = np.log10(np.maximum(I2, 1e-10))
+log_S2 = np.log10(np.maximum(S2, 1e-18))
+log_E2 = np.log10(np.maximum(E2, 1e-18))
+log_I2 = np.log10(np.maximum(I2, 1e-18))
 
 # ── Figure ────────────────────────────────────────────────────────────────────
 color_1 = '#D4B847'   # yellow: E(0) = 0.01N
