@@ -1,4 +1,4 @@
-# Non-linear Dynamical Systems with Chaotic Behaviour
+# Non-linear Dynamical Systems with Chaotic Behaviour: an application on rumour spreading on social media.
 
 This repository contains all Python scripts used to generate the figures in the Bachelor's Thesis on chaos theory and its application on rumour spreading on social media.
 
@@ -33,6 +33,8 @@ The repository is organised into three folders, one per chapter of the thesis.
     ├── SEIR-MLE.py
     ├── SEIR-bifurcation.py
     └── SEIR-phase-portrait.py
+    └── SEIR-numerical-analysis.py
+    └── SEIR-repetition.py
 ```
 
 ## Description
@@ -66,6 +68,8 @@ Scripts corresponding to the figures in Chapter 4 of the thesis.
 - **SEIR-bifurcation.py** — Bifurcation diagrams for the seasonally forced SEIR model for four parameter configurations (Figures 4.1-4.5). To generate the diagram for a different case, change the parameters at the top of the script.
 - **SEIR-MLE.py** — Maximal Lyapunov exponent for the forced SEIR model for four parameter configurations (Figures 4.6-4.9). To generate the figure for a different case, change the parameters at the top of the script.
 - **SEIR-phase-portrait.py** — Phase portrait and time series for Case 2 of the forced SEIR model, for four values of the forcing amplitude epsilon (Figures 4.10-4.13). To generate the figure for a different epsilon, change the parameter at the top of the script.
+- **SEIR-numerical-analysis.py** — Numerical convergence test for the forced SEIR model at epsilon = 0.19, evaluating the effect of strict absolute tolerances (atol) on long-term integration accuracy.
+- **SEIR-repetition.py** — Temporal repetition analysis computing the maximum absolute error between I(t) and I(t - 2 years). Used to empirically distinguish bistability from deterministic chaos.
 
 ## Requirements
 
