@@ -3,14 +3,10 @@ import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 from scipy.signal import find_peaks
 
-# ============================================================
 # Corresponds to Figures 4.1 - 4.4: bifurcation diagrams for
-# the seasonally forced SEIR model for rumour spread on social
-# media.
-#
+# the seasonally forced SEIR model for rumour spread on social media.
 # To generate the diagram for a different case, change ONLY
 # the parameters in the "User parameters" section below.
-#
 # The model is:
 #   dS/dt = mu*(1-S) - beta(t)*S*I
 #   dE/dt = beta(t)*S*I - (mu+sigma)*E
@@ -22,7 +18,6 @@ from scipy.signal import find_peaks
 # The bifurcation diagram records the local maxima of I(t) in
 # the stationary regime as a function of the forcing amplitude
 # epsilon, plotted on a log10 scale.
-# ============================================================
 
 # User parameters (change these for each case) 
 
