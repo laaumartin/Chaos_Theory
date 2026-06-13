@@ -5,11 +5,10 @@ import matplotlib
 matplotlib.use('Agg')
 
 # Corresponds to Figure 3.15: correlation dimension analysis of the logistic map
-# at the Feigenbaum accumulation point r_inf ≈ 3.56994567,
-# where the system sits exactly at the onset of chaos
+# at the Feigenbaum accumulation point r ≈ 3.56994567
 
 
-# --- Parameters ---
+# Parameters 
 r = 3.56994567
 N_target = 10000
 N_transient = 10000  # long transient to ensure convergence to the fractal attractor
@@ -29,7 +28,7 @@ for i in range(N_target):
 # This is the standard delay embedding used by Grassberger and Procaccia
 points = np.column_stack((trajectory[:-1], trajectory[1:]))
 
-# --- Grassberger-Procaccia correlation sum ---
+# Grassberger-Procaccia correlation sum
 distances = pdist(points, metric='euclidean')
 r_min = np.min(distances[distances > 0])
 r_max = np.max(distances)
