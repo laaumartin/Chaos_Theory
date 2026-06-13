@@ -8,7 +8,7 @@ matplotlib.use('Agg')
 # Left panel: sampled points on the Lorenz attractor
 # Right panel: log-log plot of C(r) vs r with linear fit for Dc
 
-# --- Lorenz system: RK4 integrator ---
+# Lorenz system: RK4 integrator
 def lorenz_derivatives(state, sigma=10.0, rho=28.0, beta=8.0/3.0):
     x, y, z = state
     return np.array([sigma*(y-x), x*(rho-z)-y, x*y-beta*z])
@@ -20,7 +20,7 @@ def rk4_step(state, dt):
     k4 = lorenz_derivatives(state + dt*k3)
     return state + (dt/6.0)*(k1 + 2*k2 + 2*k3 + k4)
 
-# --- Integration parameters ---
+# Integration parameters
 dt_int = 0.01           # internal RK4 step size
 tau_sample = 0.25       # sampling interval to reduce temporal correlations
 N_target = 15000        # number of points sampled from the attractor
@@ -38,7 +38,7 @@ for i in range(N_target):
         state = rk4_step(state, dt_int)
     points[i] = state
 
-# --- Grassberger-Procaccia correlation dimension ---
+# Grassberger-Procaccia correlation dimension
 distances = pdist(points, metric='euclidean')
 r_min = np.min(distances[distances > 0])
 r_max = np.max(distances)
