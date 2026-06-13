@@ -90,4 +90,4 @@ ax2.grid(True, linestyle='--', alpha=0.5)
 plt.tight_layout()
 plt.savefig('lorenz_grassberger_procaccia.pdf', format='pdf',
             bbox_inches='tight', dpi=300)
-print(f"Imagen guardada. Dc estimada: {slope:.3f}")
+print(f"Dc estimated: {slope:.3f}")
