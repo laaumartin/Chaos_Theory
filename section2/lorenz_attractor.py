@@ -51,4 +51,3 @@ ax.view_init(elev=25, azim=-45)
 
 plt.tight_layout()
 plt.savefig('lorenz_global.pdf', dpi=300, bbox_inches='tight')
-print("Imagen guardada como 'lorenz_global.pdf'")
