@@ -55,9 +55,9 @@ Scripts corresponding to the figures in Chapter 3 of the thesis.
 - **orbit_logistic.py** — Orbit diagram for the logistic map (Figure 3.6).
 - **lyapunov_logistic.py** — Lyapunov exponent for the logistic map as a function of the growth rate r (Figure 3.7).
 - **orbit_sine.py** — Orbit diagram for the sine map x_{n+1} = r*sin(pi*x_n) (Figure 3.8).
-- **renormalization.py** — Renormalization of the logistic map at r = 3.4: comparison of f(x) and f^(2)(x) (Figure 3.10).
-- **renormalization2.py** — Renormalization of the second iterate at r = 3.55: comparison of f^(2)(x) and f^(4)(x) (Figure 3.11).
-- **renormalization3.py** — Renormalization at the exact superstable parameters R0 and R1 (Figure 3.12).
+- **renormalization.py** — Renormalisation of the logistic map at r = 3.4: comparison of f(x) and f^(2)(x) (Figure 3.10).
+- **renormalization2.py** — Renormalisation of the second iterate at r = 3.55: comparison of f^(2)(x) and f^(4)(x) (Figure 3.11).
+- **renormalization3.py** — Renormalisation at the exact superstable parameters R0 and R1 (Figure 3.12).
 - **dimension_logistic.py** — Correlation dimension analysis of the logistic map at the Feigenbaum accumulation point r_inf ≈ 3.5699456 (Figure 3.15).
 - **dimension_lorenz1.py** — Grassberger-Procaccia algorithm for the Lorenz system (Figure 3.16).
 - **lorenz_attractor.py** — Global view of the Lorenz strange attractor with sigma=10, rho=28, beta=8/3 (Figure 3.17).
