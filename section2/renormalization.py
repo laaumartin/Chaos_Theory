@@ -33,7 +33,7 @@ box_y = y_min - 0.02
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
 
-# --- Left panel: f(x) and f^(2)(x) with the green box ---
+# Left panel: f(x) and f^(2)(x) with the green box 
 ax1.plot(x, y1, 'b-', linewidth=2, label='$f(x)$')
 ax1.plot(x, y2, 'r-', linewidth=2, label='$f^{(2)}(x)$')
 ax1.plot(x, x, 'k--', alpha=0.3)  # diagonal y = x for reference
@@ -51,7 +51,7 @@ ax1.set_ylim(0, 1)
 ax1.legend(loc='lower right', fontsize=11)
 ax1.grid(True, linestyle=':', alpha=0.6)
 
-# --- Right panel: renormalised central peak overlaid on f(x) ---
+# Right panel: renormalised central peak overlaid on f(x) 
 ax2.plot(x, y1, 'b-', linewidth=2, label='$f(x)$', alpha=0.5)
 
 # Extract f^(2)(x) restricted to the box domain
