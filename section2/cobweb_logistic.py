@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Corresponds to Figures 3.1-3.5: time series and cobweb diagrams
+# Corresponds to Figures 3.1-3.5: cobweb diagrams
 # for the logistic map x_{n+1} = r*x_n(1 - x_n)
 # for r = 0.5, 2.8, 3.3, 3.8 and 4.0 respectively.
 # This script generates one figure at a time by changing the parameter r.
