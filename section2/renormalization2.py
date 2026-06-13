@@ -4,7 +4,7 @@ import matplotlib.patches as patches
 import matplotlib
 matplotlib.use('Agg')
 
-# Corresponds to Figure 3.11: renormalization of the second iterate at r = 3.55
+# Corresponds to Figure 3.11: renormalisation of the second iterate at r = 3.55
 # Left panel: f^(2)(x) and f^(4)(x) with a green box around the central peak
 # Right panel: the rescaled and inverted central peak overlaid on f^(2)(x)
 
@@ -28,7 +28,7 @@ box_height = 0.21
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
 
-# --- Left panel: f^(2)(x) and f^(4)(x) with the green box ---
+# Left panel: f^(2)(x) and f^(4)(x) with the green box
 # f^(2)(x) plays the role of the "parent" function
 # f^(4)(x) is the "child" function whose central peak will be renormalised
 ax1.plot(x, y2, 'b-', linewidth=2, label='$f^{(2)}(x)$')
@@ -46,7 +46,7 @@ ax1.set_ylim(0, 1)
 ax1.legend(loc='upper left', fontsize=11)
 ax1.grid(True, linestyle=':', alpha=0.6)
 
-# --- Right panel: renormalised central peak of f^(4) overlaid on f^(2) ---
+# Right panel: renormalised central peak of f^(4) overlaid on f^(2) 
 ax2.plot(x, y2, 'b-', linewidth=2, label='$f^{(2)}(x)$', alpha=0.5)
 
 # Extract f^(4)(x) restricted to the box domain
