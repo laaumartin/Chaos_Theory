@@ -2,13 +2,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
-# ============================================================
 # Numerical Convergence Analysis for the Forced SEIR Model
 # Testing the effect of absolute tolerance (atol) on long-term
 # integration accuracy for the fractional population scale.
-# ============================================================
 
-# ── Parameters ──
+# Parameters
 epsilon = 0.19
 mu = 0.02
 beta0 = 1241.0
@@ -25,7 +23,7 @@ t_full = np.linspace(0, total_years, total_years * pts_per_yr)
 # Initial condition for the trajectory that showed sensitivity (E0 = 0.001)
 y0 = [0.06, 0.001, 0.001]
 
-# ── Model ──
+# Model
 def forced_seir(y, t):
     S = max(y[0], 0)
     E = max(y[1], 0)
@@ -36,7 +34,7 @@ def forced_seir(y, t):
     dI = sigma * E - (mu + gamma) * I
     return [dS, dE, dI]
 
-# ── Convergence Test ──
+# Convergence Test
 atols = [1e-10, 1e-14, 1e-17, 1e-19]
 sols = []
 
@@ -52,13 +50,13 @@ for tol in atols:
 idx_start = t_transient * pts_per_yr
 t_plot = t_full[idx_start:]
 
-# ── Calculate Differences ──
+# Calculate Differences
 print("\nMaximum difference between successive tolerances (last 50 years):")
 for i in range(len(atols)-1):
     diff = np.max(np.abs(sols[i+1][idx_start:, 2] - sols[i][idx_start:, 2]))
     print(f"  |atol({atols[i]}) - atol({atols[i+1]})| = {diff:.2e}")
 
-# ── Plot ──
+# Plot 
 fig, ax = plt.subplots(figsize=(12, 5))
 ax.set_facecolor('#f8f9fa')
 
