@@ -7,7 +7,7 @@ from scipy.integrate import odeint
 # The repetition error is computed by comparing I(t) with I(t - 2 years) 
 # over a window of 10 years, and calculating the maximum absolute difference.
 
-# ── Fixed Parameters ──
+# Fixed Parameters 
 mu, beta0, sigma, gamma, omega = 0.02, 1241.0, 365.0/8.0, 73.0, 2.0*np.pi
 t_transient, t_sample = 950, 50
 pts_per_yr = 200
@@ -45,12 +45,12 @@ t_window   = t_steady[window_start:window_end]
 max_error = np.max(np.abs(I_original - I_shifted))
 print(f"  -> Maximum error when shifting by 2 years (eps={eps}): {max_error:.2e}")
 
-# ── Plot ──
+# Plot
 fig, ax = plt.subplots(figsize=(9, 5))
 fig.patch.set_facecolor('#f8f9fa')
 ax.set_facecolor('#f8f9fa')
 
-# Original line (Thicker to show the dashed line perfectly embedded)
+# Original line 
 ax.plot(t_window, I_original, color='#5C2D6D', linewidth=3.5, label='I(t) Original')
 # Shifted "ghost" line
 ax.plot(t_window, I_shifted, color='black', linestyle='--', linewidth=1.5, 
