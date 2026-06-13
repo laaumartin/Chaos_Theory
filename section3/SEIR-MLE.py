@@ -3,21 +3,15 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.integrate import odeint
 
-# ============================================================
 # Corresponds to Figures 4.6 - 4.9: maximal Lyapunov exponent
 # for the seasonally forced SEIR model for rumour spread on
-# social media, for four different parameter configurations
-# (Cases 1-4).
-#
+# social media, for four different parameter configurations (Cases 1-4).
 # Method: Benettin et al. (1980) — single perturbation with periodic renormalisation.
-#
-# A positive lambda confirms deterministic chaos.
-# Lambda = 0 indicates a periodic orbit (or quasi-periodic).
+# Lambda = 0 indicates a periodic orbit.
 # Lambda < 0 indicates a stable fixed point or limit cycle.
-#
 # To generate the figure for a different case, change ONLY
-# the parameters in the "User parameters" section below.
-# ============================================================
+# the parameters in the "User parameters" section below
+
 
 # User parameters (change these for each case)
 
