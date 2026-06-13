@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('Agg')
 
-# Corresponds to Figure 3.12: renormalization of the logistic map
-# at the exact superstable parameters R0 and R1
+# Corresponds to Figure 3.12: renormalisation of the logistic map
+# at the exact superstable parameter
 
 # Superstable parameters:
 # R0 = 2.0: the fixed point x* = 0.5 is superstable (f'(x*) = 0)
@@ -27,7 +27,7 @@ y_f2_R1 = f2(x, R1)
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
 
-# --- Left panel: direct comparison of f(x, R0) and f^(2)(x, R1) ---
+# Left panel: direct comparison of f(x, R0) and f^(2)(x, R1)
 # Both curves pass through (0.5, 0.5) by the superstability condition
 ax1.plot(x, y_f_R0,  'b-', linewidth=2,
          label=f'$f(x, R_0)$, $R_0 = 2.0$')
@@ -43,7 +43,7 @@ ax1.set_ylim(0, 1)
 ax1.legend(loc='lower left', fontsize=11)
 ax1.grid(True, linestyle=':', alpha=0.6)
 
-# --- Right panel: renormalisation transformation ---
+# Right panel: renormalisation transformation 
 ax2.plot(x, y_f_R0, 'b-', linewidth=3, label='$f(x, R_0)$', alpha=0.4)
 
 # Apply the renormalisation operator centred at x = 0.5:
