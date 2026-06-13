@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 # Corresponds to Figure 3.7: Lyapunov exponent for the logistic map
 # x_{n+1} = r*x_n(1 - x_n) as a function of the growth rate r
 
-# --- Simulation parameters ---
+# Simulation parameters
 r_values = np.linspace(0.1, 4.0, 4000)  # 4000 equally spaced values of r
 lyapunov = np.zeros(len(r_values))
 
@@ -34,7 +34,7 @@ for i, r in enumerate(r_values):
     # Lyapunov exponent: time average of log|f'|
     lyapunov[i] = lyap_sum / n_iter
 
-# --- Print key values at selected r points ---
+# Print key values at selected r points
 print("--- LYAPUNOV EXPONENTS ---")
 analyzed_r = [0.5, 1, 2.0, 2.8, 3, 3.2, 3.81, 3.83, 4.0]
 analyzed_lyap = []
@@ -49,7 +49,7 @@ for pr in analyzed_r:
         print(f"r = {pr:.2f} -> Exponent: {valor_lyap:.4f}")
 print("---------------------------------------------------------")
 
-# --- Plot ---
+# Plot
 plt.figure(figsize=(12, 6))
 
 # Plot the Lyapunov exponent curve
