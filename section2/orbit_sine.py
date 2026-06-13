@@ -6,7 +6,7 @@ matplotlib.use('Agg')
 # Corresponds to Figure 3.8: orbit diagram for the sine map
 # x_{n+1} = r*sin(pi*x_n) over the range r in [0.70, 1.00]
 
-# --- Simulation parameters ---
+# Simulation parameters
 n_r = 8000           # number of r values (horizontal resolution)
 r_min, r_max = 0.70, 1.00
 n_transient = 1000   # transient iterations discarded
